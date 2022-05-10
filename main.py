@@ -32,8 +32,8 @@ def Setup():
     if setemail == setpass or setemail == setrecov or setrecov== setpass:
         print("Password, Email, and Recovery Cannot Be The Same")
         Setup()
-    info.write("[" + setemail + " " + setrecov + "] \n")
-    info.write("[" + setemail + " 1 " + setpass + "]" )
+    info.write(f"[{setemail} {setrecov}" + "] \n")
+    info.write(f"[{setemail} 1 {setpass}]")
 
 def Login():
     info = open("example.uiwaygusduowauh", "r")
@@ -44,7 +44,7 @@ def Login():
     user = input()
     print("What Is Your Password?")
     pwass = input()
-    allinfo = "[" + user + " 1 " + pwass +"]"
+    allinfo = f"[{user} 1 {pwass}]"
     print(allinfo)
     if allinfo in info:
         print('String', allinfo, 'Found In File')
@@ -57,7 +57,7 @@ def resetpass():
     email = input("")
     print("What is Your Recovery Info? (Where Was Your First School?)")
     recov = input()
-    allinfo = "[" + email + " " + recov + "]"
+    allinfo = f"[{email} {recov}]"
     print(allinfo)
     if allinfo in info:
         print('String', allinfo, 'Found In File')
@@ -65,7 +65,7 @@ def resetpass():
         newpass = input()
         with open("example.uiwaygusduowauh", 'r+') as f:
             text = f.read()
-            text = re.sub("[" + email + "1" , "[" + email + " " + newpass + "]", text)
+            text = re.sub(f"[{email}1", f"[{email} {newpass}]", text)
             f.seek(0)
             f.write(text)
             f.truncate()
