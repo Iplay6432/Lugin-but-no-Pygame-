@@ -1,4 +1,8 @@
 import regex as re
+try:
+    tt = open("example.uiwaygusduowauh")
+except:
+    f = open("example.uiwaygusduowauh", "x")
 def mainscree():
     print("What Would YOu Like To Do Today?")
     print("1: Setup")
