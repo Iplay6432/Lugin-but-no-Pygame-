@@ -78,24 +78,10 @@ def resetpass():
         lines = file.readlines()
         file.close
         for i in range(len(lines)):
-            #flag = 0
-            #index = 0
-            """
-            for line in info:  
-                index += 1 
-                if damp in lines:        
-                    flag = 1
-                    break 
-            if flag == 0: 
-                print(damp)
-                print('String', damp , 'Not Found') 
-                """
-            #else:
             if True:
                 print(damp)
                 print(lines[i])          
                 if damp in lines[i]:
-                    #balance = (lines[i])
                     balance = ("[" + email + " 1 " + newpass +"]")
                     lines[i] = (balance)
                     print("worked???")
