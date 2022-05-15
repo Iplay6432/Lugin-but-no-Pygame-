@@ -59,18 +59,52 @@ def resetpass():
     recov = input()
     allinfo = f"[{email} {recov}]"
     print(allinfo)
-    if allinfo in info:
+    damp = email + " 1"
+    flag = 0
+    index = 0
+    for line in info:  
+        index += 1 
+        if allinfo in line:
+        
+            flag = 1
+            break 
+    if flag == 0: 
+        print('String', allinfo , 'Not Found') 
+    else:
         print('String', allinfo, 'Found In File')
         print("What Would You Like Your New Password to Be?")
         newpass = input()
-        with open("example.uiwaygusduowauh", 'r+') as f:
-            text = f.read()
-            text = re.sub(f"[{email}1", f"[{email} {newpass}]", text)
-            f.seek(0)
-            f.write(text)
-            f.truncate()
-    else:
-        print("Incorrect Password/Username")
+        file = open("example.uiwaygusduowauh")
+        lines = file.readlines()
+        file.close
+        for i in range(len(lines)):
+            #flag = 0
+            #index = 0
+            """
+            for line in info:  
+                index += 1 
+                if damp in lines:        
+                    flag = 1
+                    break 
+            if flag == 0: 
+                print(damp)
+                print('String', damp , 'Not Found') 
+                """
+            #else:
+            if True:
+                print(damp)
+                print(lines[i])          
+                if damp in lines[i]:
+                    #balance = (lines[i])
+                    balance = ("[" + email + " 1 " + newpass +"]")
+                    lines[i] = (balance)
+                    print("worked???")
+                else:
+                    print("didnt work")
+        file = open("example.uiwaygusduowauh", "w")
+        file.write("")
+        file.writelines(lines)
+        file.close
 def loggedin():
     print("it workced")
 mainscree()
