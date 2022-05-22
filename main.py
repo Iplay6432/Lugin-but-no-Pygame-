@@ -75,6 +75,17 @@ def checkbal(username):
         balty = "( "+ username + " &5!5 " + "0" " )"
         tinfo.write(balty)
         print("workced??")
+    file = open("example.uiwaygusduowauh")
+    lines = file.readlines()
+    file.close
+    for i in range(len(lines)):
+        if True:
+            print(bal)
+            print(lines[i])          
+            if bal in lines[i]:
+                urdadswife =lines.split
+                print(urdadswife)
+                lines[i] = ()
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
