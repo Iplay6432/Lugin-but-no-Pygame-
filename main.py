@@ -38,6 +38,7 @@ def Setup():
         Setup()
     info.write(f"[{setemail} {setrecov}" + "] \n")
     info.write(f"[{setemail} 1 {setpass}]")
+    mainscree()
 
 def Login():
     info = open("example.uiwaygusduowauh", "r")
@@ -52,9 +53,28 @@ def Login():
     print(allinfo)
     if allinfo in info:
         print('String', allinfo, 'Found In File')
+        print("What Would You Like to Do?")
+        print("1: Check Your Balance/Walet")
+        print("2: Deposit Money")
+        print("3: Get Money")
+        choice = input("")
+        if choice == "1":
+            checkbal(user)
+
     else:
         print("Incorrect Password/Username")
 
+def checkbal(username):
+    info = open("example.uiwaygusduowauh", "r")
+    bal = "( " + username + " asdfa"
+    try:
+        if  bal in info:     
+            print("urmom")
+    except:
+        tinfo = open("example.uiwaygusduowauh", "a")
+        balty = "( "+ username + " &5!5 " + "0" " )"
+        tinfo.write(balty)
+        print("workced??")
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
