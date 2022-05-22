@@ -1,8 +1,12 @@
 import regex as re
 try:
     tt = open("example.uiwaygusduowauh")
+    tt.close
 except:
-    f = open("example.uiwaygusduowauh", "x")
+    d = open("example.uiwaygusduowauh", "x")
+    d.close
+def split(word):
+    return [char for char in word]
 def mainscree():
     print("What Would YOu Like To Do Today?")
     print("1: Setup")
@@ -36,8 +40,9 @@ def Setup():
     if setemail == setpass or setemail == setrecov or setrecov== setpass:
         print("Password, Email, and Recovery Cannot Be The Same")
         Setup()
-    info.write(f"[{setemail} {setrecov}" + "] \n")
+    info.write(f"[{setemail} {setrecov}] \n")
     info.write(f"[{setemail} 1 {setpass}]")
+    info.close
     mainscree()
 
 def Login():
@@ -49,9 +54,18 @@ def Login():
     user = input()
     print("What Is Your Password?")
     pwass = input()
-    allinfo = f"[{user} 1 {pwass}]"
+    allinfo = "["+ user + " 1 " + pwass + "]"
     print(allinfo)
-    if allinfo in info:
+    flag = 0
+    index = 0
+    for line in info:  
+        index += 1 
+        if allinfo in line:
+            flag = 1
+            break 
+    if flag == 0:
+        print("Incorrect Password/Username")
+    else: 
         print('String', allinfo, 'Found In File')
         print("What Would You Like to Do?")
         print("1: Check Your Balance/Walet")
@@ -59,12 +73,8 @@ def Login():
         print("3: Get Money")
         choice = input("")
         if choice == "1":
-            checkbal(user)
-
-    else:
-        print("Incorrect Password/Username")
-
-def checkbal(username):
+            ccb(user)
+def ccb(username):
     info = open("example.uiwaygusduowauh", "r")
     bal = "[" + username + " asdfa"
     flag = 0
@@ -77,14 +87,15 @@ def checkbal(username):
     if flag == 0: 
         info.close
         print("L")
-        tinfo = open("example.uiwaygusduowauh", "x")
-        balty = "[ "+ username + " &5!5 " + "0" " ]"
-        tinfo.write(balty)
+        tinfo = open("example.uiwaygusduowauh", "a")
+        balty = "\n["+ username + " &5!5 " + "0" "]"
+        tinfo.write(balty + "\n")
         print("workced??")
         tinfo.close
+        lb(bal)
     else:
         print('String', bal, 'Found In File')
-        
+def lb(bal):    
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
     file.close
@@ -92,16 +103,16 @@ def checkbal(username):
         if True:
             print(lines[i])          
             if bal in lines[i]:
-                urdadswife =lines.split
+                lines[i] = (bal)
+                urdadswife = split(lines)
                 print(urdadswife)
-                lines[i] = ()
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
     email = input("")
     print("What is Your Recovery Info? (Where Was Your First School?)")
     recov = input()
-    allinfo = f"[{email} {recov}]"
+    allinfo ="[" + email + " " + recov + "]"
     print(allinfo)
     damp = email + " 1"
     flag = 0
@@ -118,7 +129,7 @@ def resetpass():
         print('String', allinfo, 'Found In File')
         print("What Would You Like Your New Password to Be?")
         newpass = input()
-        file = open("example.uiwaygusduowauh")
+        file = open("example.uiwaygusduowauh") 
         lines = file.readlines()
         file.close
         for i in range(len(lines)):
