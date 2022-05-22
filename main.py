@@ -67,19 +67,24 @@ def Login():
 def checkbal(username):
     info = open("example.uiwaygusduowauh", "r")
     bal = "[" + username + " asdfa"
-    try:
-        print("urmom")
-        if  bal in info:     
-            print("urmom")
-        else:
-            print("L")
-            tinfo = open("example.uiwaygusduowauh", "x")
-            balty = "[ "+ username + " &5!5 " + "0" " ]"
-            tinfo.write(balty)
-            print("workced??")
-            tinfo.close
-    except:
-       print("didnt work")
+    flag = 0
+    index = 0
+    for line in info:  
+        index += 1 
+        if bal in line:
+            flag = 1
+            break 
+    if flag == 0: 
+        info.close
+        print("L")
+        tinfo = open("example.uiwaygusduowauh", "x")
+        balty = "[ "+ username + " &5!5 " + "0" " ]"
+        tinfo.write(balty)
+        print("workced??")
+        tinfo.close
+    else:
+        print('String', bal, 'Found In File')
+        
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
     file.close
