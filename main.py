@@ -41,7 +41,7 @@ def Setup():
         print("Password, Email, and Recovery Cannot Be The Same")
         Setup()
     info.write(f"[{setemail} {setrecov}] \n")
-    info.write(f"[{setemail} 1 {setpass}]")
+    info.write(f"[{setemail} 1 {setpass}]\n")
     info.close
     mainscree()
 
@@ -88,22 +88,23 @@ def ccb(username):
         info.close
         print("L")
         tinfo = open("example.uiwaygusduowauh", "a")
-        balty = "\n["+ username + " &5!5 " + "0" "]"
+        balty = "["+ username + " &5!5 " + "0" "]\n"
+        balfe = "["+ username + " &5!5 "
         tinfo.write(balty + "\n")
         print("workced??")
         tinfo.close
-        lb(bal)
+        lb(balfe)
     else:
         print('String', bal, 'Found In File')
-def lb(bal):    
+def lb(balfe):    
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
     file.close
     for i in range(len(lines)):
         if True:
             print(lines[i])          
-            if bal in lines[i]:
-                lines[i] = (bal)
+            if balfe in lines[i]:
+                lines[i] = (balfe)
                 urdadswife = split(lines)
                 print(urdadswife)
 def resetpass():
