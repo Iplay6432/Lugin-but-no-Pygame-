@@ -76,37 +76,40 @@ def Login():
             ccb(user)
 def ccb(username):
     info = open("example.uiwaygusduowauh", "r")
-    bal = "[" + username + " asdfa"
+    balfe = "["+ username + " &5!5 "
     flag = 0
     index = 0
     for line in info:  
         index += 1 
-        if bal in line:
+        if balfe in line:
             flag = 1
             break 
     if flag == 0: 
+        print('String', balfe, 'Found In File')
+        lb(balfe,username)
+    else:
         info.close
         print("L")
         tinfo = open("example.uiwaygusduowauh", "a")
-        balty = "["+ username + " &5!5 " + "0" "]\n"
-        balfe = "["+ username + " &5!5 "
+        balty = "["+ username + " &5!5 " + "5" "]\n"
         tinfo.write(balty + "\n")
         print("workced??")
         tinfo.close
-        lb(balfe)
-    else:
-        print('String', bal, 'Found In File')
-def lb(balfe):    
+        lb(balfe,username)
+def lb(balfe,user):    
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
     file.close
+    print("got")
     for i in range(len(lines)):
-        if True:
-            print(lines[i])          
+        if True:        
             if balfe in lines[i]:
                 lines[i] = (balfe)
-                urdadswife = split(lines)
-                print(urdadswife)
+                showbal(user, lines[i])
+
+def showbal(user,balfe):
+    print (balfe.split(' '))
+
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
