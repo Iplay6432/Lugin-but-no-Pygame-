@@ -85,9 +85,6 @@ def ccb(username):
             flag = 1
             break 
     if flag == 0: 
-        print('String', balfe, 'Found In File')
-        lb(balfe,username)
-    else:
         info.close
         print("L")
         tinfo = open("example.uiwaygusduowauh", "a")
@@ -95,7 +92,10 @@ def ccb(username):
         tinfo.write(balty + "\n")
         print("workced??")
         tinfo.close
-        lb(balfe,username)
+        lb(balfe,username) 
+    else:
+        print('String', balfe, 'Found In File')
+        lb(balfe,username)     
 def lb(balfe,user):    
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
@@ -105,11 +105,16 @@ def lb(balfe,user):
         if True:        
             if balfe in lines[i]:
                 lines[i] = (balfe)
+                print("drought")
                 showbal(user, lines[i])
+                
 
 def showbal(user,balfe):
-    print (balfe.split(' '))
-
+    lits = balfe
+    lits="'"+balfe+"'"
+    lits=str(lits)
+    danks = lits.split(' ')
+    print(danks)
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
