@@ -41,7 +41,7 @@ def Setup():
         print("Password, Email, and Recovery Cannot Be The Same")
         Setup()
     info.write(f"[{setemail} {setrecov}] \n")
-    info.write(f"[{setemail} 1 {setpass}]\n")
+    info.write(f"[{setemail} 1 {setpass}] \n")
     info.close
     mainscree()
 
@@ -88,7 +88,7 @@ def ccb(username):
         info.close
         print("L")
         tinfo = open("example.uiwaygusduowauh", "a")
-        balty = "["+ username + " &5!5 " + "5" "]\n"
+        balty = "["+ username + " &5!5 " + "5" "]"
         tinfo.write(balty + "\n")
         print("workced??")
         tinfo.close
@@ -104,17 +104,28 @@ def lb(balfe,user):
     for i in range(len(lines)):
         if True:        
             if balfe in lines[i]:
-                lines[i] = (balfe)
+                balfe = lines[i]
                 print("drought")
                 showbal(user, lines[i])
                 
 
 def showbal(user,balfe):
+    print(balfe)
     lits = balfe
-    lits="'"+balfe+"'"
+    lits=balfe
     lits=str(lits)
     danks = lits.split(' ')
     print(danks)
+    del danks[0]
+    print(danks)
+    del danks[0]
+    print(danks)
+    # danks.remove("["+user)
+    # danks.remove("&5!5")
+    # print(danks)
+    # franks=danks.split(']')
+    # print(franks)
+    franks=danks.split(']\n')
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
