@@ -114,18 +114,16 @@ def showbal(user,balfe):
     lits = balfe
     lits=balfe
     lits=str(lits)
-    danks = lits.split(' ')
-    print(danks)
-    del danks[0]
-    print(danks)
-    del danks[0]
-    print(danks)
-    # danks.remove("["+user)
-    # danks.remove("&5!5")
-    # print(danks)
-    # franks=danks.split(']')
-    # print(franks)
-    franks=danks.split(']\n')
+    lits = lits.split(' ')
+    print(lits)
+    del lits[0]
+    print(lits)
+    del lits[0]
+    print(lits)
+    idrk =''.join(c for c in lits if c.isdigit())
+    print("1")
+    print(idrk)
+    print("1")
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
