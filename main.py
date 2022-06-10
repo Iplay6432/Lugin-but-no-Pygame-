@@ -74,6 +74,16 @@ def Login():
         choice = input("")
         if choice == "1":
             ccb(user)
+        if choice == "2":
+            depmoney(user)
+        if choice == "3":
+            getmon(user)
+
+def getmon(user):
+        x=1
+def depmoney(user):
+        x=1
+
 def ccb(username):
     info = open("example.uiwaygusduowauh", "r")
     balfe = "["+ username + " &5!5 "
