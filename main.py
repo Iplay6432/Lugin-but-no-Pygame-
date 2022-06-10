@@ -75,15 +75,85 @@ def Login():
         if choice == "1":
             ccb(user)
         if choice == "2":
-            depmoney(user)
+            checkwal(user)
         if choice == "3":
             getmon(user)
 
 def getmon(user):
         x=1
-def depmoney(user):
-        x=1
-
+def checkwal(user):
+    info = open("example.uiwaygusduowauh", "r")
+    talfe = "["+ user + " BAntLEancEESS "
+    flag = 0
+    index = 0
+    for line in info:  
+        index += 1 
+        if talfe in line:
+            flag = 1
+            break 
+    if flag == 0: 
+        info.close
+        print("L")
+        tinfo = open("example.uiwaygusduowauh", "a")
+        tianfy= "["+ user + " BAntLEancEESS " + "10" "]"
+        tinfo.write(tianfy + "\n")
+        print("workced??")
+        tinfo.close
+    else:
+        print('String', tianfy, 'Found In File')
+def depmon(user):
+    info = open("example.uiwaygusduowauh", "r")
+    tnalfe = "["+ user + " BAntLEancEESS "
+    
+    file = open("example.uiwaygusduowauh")
+    lines = file.readlines()
+    file.close
+    
+    for i in range(len(lines)):
+        if True:        
+            if tnalfe in lines[i]:
+                tnalfe = lines[i]
+def writemon(user, tnalfe):
+    print(tnalfe)
+    lits = tnalfe
+    lits=tnalfe
+    lits=str(lits)
+    lits = lits.split(' ')
+    del lits[0]
+    del lits[0]
+    stringg = ''.join(str(x) for x in lits)
+    print(stringg)
+    x = stringg.replace("]", "", 1)
+    y = stringg.replace("]", "", 1)
+    y = int(y)
+    print("Your Walet has $" +x)
+    print ("How much money do you want put into your bank Account?")
+    monadd=input("")
+    montadd = int(monadd)
+    if montadd > y():
+        print("Incorrect Number, Try again, It is greater than your walet")
+    elif montadd <= y():
+        lb()
+        writeyybal(user, x,tnalfe)
+def writeyybal(user,addbal,tnalfe):
+    balfe = "["+ user + " &5!5 "
+    file = open("example.uiwaygusduowauh") 
+    lines = file.readlines()
+    file.close
+    for i in range(len(lines)):
+        if True:
+            print(balfe)
+            print(lines[i])          
+            if balfe in lines[i]:
+                balance = (balfe )
+                lines[i] = (balance)
+                print("worked???")
+            else:
+                print("didnt work")
+        file = open("example.uiwaygusduowauh", "w")
+        file.write("")
+        file.writelines(lines)
+        file.close
 def ccb(username):
     info = open("example.uiwaygusduowauh", "r")
     balfe = "["+ username + " &5!5 "
@@ -129,6 +199,7 @@ def showbal(user,balfe):
     print(stringg)
     x = stringg.replace("]", "", 1)
     print("Your Balance is " + "$" +x)
+    return x
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
