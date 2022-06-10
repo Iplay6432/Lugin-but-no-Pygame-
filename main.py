@@ -100,12 +100,10 @@ def lb(balfe,user):
     file = open("example.uiwaygusduowauh")
     lines = file.readlines()
     file.close
-    print("got")
     for i in range(len(lines)):
         if True:        
             if balfe in lines[i]:
                 balfe = lines[i]
-                print("drought")
                 showbal(user, lines[i])
                 
 
@@ -115,15 +113,12 @@ def showbal(user,balfe):
     lits=balfe
     lits=str(lits)
     lits = lits.split(' ')
-    print(lits)
     del lits[0]
-    print(lits)
     del lits[0]
-    print(lits)
-    idrk =''.join(c for c in lits if c.isdigit())
-    print("1")
-    print(idrk)
-    print("1")
+    stringg = ''.join(str(x) for x in lits)
+    print(stringg)
+    x = stringg.replace("]", "", 1)
+    print("Your Balance is " + "$" +x)
 def resetpass():
     info = open("example.uiwaygusduowauh", "r")
     print("What Is Your Email?")
