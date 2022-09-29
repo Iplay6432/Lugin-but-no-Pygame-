@@ -89,9 +89,9 @@ def checkwal(user):
     for line in info:  
         index += 1 
         if talfe in line:
-            flag = 1
+            flag = 0
             break 
-    if flag == 0: 
+    if flag == 1: 
         info.close
         print("L")
         tinfo = open("example.uiwaygusduowauh", "a")
